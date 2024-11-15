@@ -1,0 +1,168 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .road {
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    position: absolute;
+    transform: translateX(-35%);
+    animation: move 5s linear forwards;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    70%{
+        transform: translateX(-23%);
+    }
+    100% {
+        transform: translateX(-35%);
+    }
+}
+
+.container .red {
+    width: 20px;
+    z-index: 1;
+    position: absolute;
+    left: 370px;
+    transform: translateY(30%) translateX(-20%) rotate(100deg);
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease; 
+}
+
+.container .car{
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 350px;
+    animation: carMoving 5s linear forwards;
+    animation-play-state: paused;
+}
+
+.container .car img{
+    width: 100%;
+}
+
+.container .car .wheel1{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 28px;
+    animation: wheelMoving 2s linear infinite;
+
+}
+.container .car .wheel2{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 124px;
+    animation: wheelMoving 2s linear infinite;
+
+}
+.container .car2{
+    z-index: 1;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 400px;
+    animation: carMoving2 5s linear forwards;
+    animation-play-state: paused;
+}
+
+.container .car2 img{
+    width: 100%;
+}
+
+.container .car2 .wheel3{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 28px;
+    animation: wheelMoving 2s linear infinite;
+}
+.container .car2 .wheel4{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 124px;
+    animation: wheelMoving 2s linear infinite;
+}
+
+
+@keyframes wheelMoving {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMoving {
+    0%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(900%);
+    }
+}
+@keyframes carMoving2 {
+    0%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(800%);
+    }
+}
+
+.container .orange {
+    width: 20px;
+    z-index: 1;
+    position: absolute;
+    left: 500px;
+    transform: translateY(190%) translateX(-670%) rotate(100deg);
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease; 
+}
+
+.container .green {
+    width: 20px;
+    z-index: 1;
+    position: absolute;
+    left: 600px;
+    transform: translateY(330%) translateX(-1160%) rotate(100deg);
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.5s ease; 
+}
